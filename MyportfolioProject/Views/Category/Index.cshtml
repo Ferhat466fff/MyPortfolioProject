@@ -1,0 +1,36 @@
+﻿@model  List<MyportfolioProject.Models.Tbl_Categories>
+@{//projeismi/dosya ismi/tablo ismi
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;//bir bir arttırdık ıdleri(bazen sıkıntı cıktıgı icin boyle yaptık)
+}
+<br />
+<br />
+
+<h3>Kategoriler Sayfası</h3>
+
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <td>#</td>
+        <td>Kategori Adı</td>
+        <td>Sil</td>
+        <td>Güncelle</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.CategoryName</td>
+            <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+            @*adres verdik-->controllr/ındex/id ye göre sil*@
+            <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+
+
+
+</table>
+<a href="/Category/AddCategory" class="btn btn-primary">Yeni Kategori Ekle</a>@*butona tıklandıgında addabout ıddex yollaycak*@

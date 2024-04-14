@@ -1,0 +1,44 @@
+﻿@model List<MyportfolioProject.Models.Tbl_Experiences>
+@{//projeismi/dosya ismi/tablo ismi
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Deneyimler Sayfası</h3>
+
+<table class="table table-bordered">
+
+    <tr>
+        <td>#</td>
+        <td>Başlangıç Yılı</td>
+        <td>Bitiş Yılı</td>
+        <td>Ünvan</td>
+        <td>Açıklama</td>
+        <td>Şirket</td>
+        <td>Konum</td>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Experienceld</td>
+            <td>@item.StartYear</td>
+            <td>@item.EndYear</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Company</td>
+            <td>@item.Locations</td>
+            <td><a href="/Experience/DeleteExperience/@item.Experienceld" class="btn btn-outline-danger ">Sil</a></td>
+            @*adres verdik-->controllr/ındex/id ye göre sil*@
+            <td><a href="/Experience/UpdateExperience/@item.Experienceld" class="btn btn-outline-info">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+<td><a href="/Experience/AddExperience/" class="btn btn-outline-dark ">Yeni Deneyim Ekle</a></td>
+

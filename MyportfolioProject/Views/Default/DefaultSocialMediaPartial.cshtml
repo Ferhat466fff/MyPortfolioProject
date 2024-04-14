@@ -1,0 +1,33 @@
+﻿@model List<MyportfolioProject.Models.Tbl_Contacts>
+
+@foreach (var item in Model)
+{
+    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container-fluid">
+            <div class="container">
+
+
+                <div class="footer-info">
+                    <h2>@item.NameSurname</h2>
+                    <h3>@item.Address</h3>
+                    <div class="footer-menu">
+                        <p>@item.Phone</p>
+                        <p>@item.Email</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="
+                           https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1603087355&extra_1=s%7Cc%7C305000809581%7Ce%7Cfacebook%20giri%C5%9F%7C&placement=&creative=305000809581&keyword=facebook%20giri%C5%9F&partner_id=googlesem&extra_2=campaignid%3D1603087355%26adgroupid%3D61834756558%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-325251754076%26loc_physical_ms%3D1012782%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gad_source=1&gclid=Cj0KCQjw2uiwBhCXARIsACMvIU0r6veaZdXAmYqAc6Z2w7VRi0YTBiSp4idxqQH7OIU-kdgNaDnZAUMaAjB0EALw_wcB"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/watch?v=N2VFPFL5Stk&list=PLUCOD892XGSaCfmgI2EHrzq5Zv2AVbsmm&index=9"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/login/tr"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container copyright">
+                <p>@DateTime.Now.Year &copy; <a href="/Default/Index">My Potfolio</a>, Tüm Hakları Saklıdır. | Designed By <a href="https://htmlcodex.com"></a></p>
+            </div>
+        </div>
+    </div>
+}

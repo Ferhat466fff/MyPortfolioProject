@@ -1,0 +1,40 @@
+﻿@model  List<MyportfolioProject.Models.Tbl_Testimonials>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<h3>Öne Çıkanlar Sayfası</h3>
+
+<table class="table table-bordered ">
+
+    <tr>
+        <td>#</td>
+        <td>İsim Soyisim</td>
+        <td>Ünvan</td>
+        <td>Resim URL</td>
+        <td>Sil</td>
+        <td>Güncelle</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.FatureId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Title</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Feature/DeleteFeature/@item.FatureId" class="btn btn-outline-danger">Sil</a></td> @*adres verdik-->controllr/ındex/id ye göre sil*@
+            <td><a href="/Feature/UpdateFeature/@item.FatureId" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+
+
+
+</table>
+<a href="/Feature/AddFeature" class="btn btn-primary">Yeni Öne Çıkanlar Ekle</a>@*butona tıklandıgında addabout ıddex yollaycak*@
+

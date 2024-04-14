@@ -1,0 +1,19 @@
+﻿@model MyportfolioProject.Models.Tbl_Categories
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h3>Kategori Güncelleme Sayfası</h3>
+@*güncelle tıklandıgında verileri alma*@
+<form method="post">
+    <input type="hidden" name="CategoryId" value="@Model.CategoryId" />@*Model.AboutId sayesinde verileri cekiyoruz*@
+    <label>Kategori Adı</label>
+    <input type="text" name="CategoryName" value="@Model.CategoryName" class="form-control" />@*input-->textbox*@
+    <br />
+  
+    <button class="btn btn-outline-primary">Güncelle</button>
+
+</form>

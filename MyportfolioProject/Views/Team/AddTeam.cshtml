@@ -1,0 +1,46 @@
+﻿@model MyportfolioProject.Models.Tbl_Teams
+@{
+    ViewBag.Title = "AddTeam";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Takım Arkadaşı Ekleme Sayfası</h2>
+<br />
+<br />
+
+<form method="post">
+
+    <label>Resim Adresi</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br />
+    <label>İsim Soyisim</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    <br />
+    <label>Ünvan</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" />
+    <br />
+    <label>Twitter Adresi</label>
+    <input type="text" name="TwitterUrl" class="form-control" />
+    <br />
+    <label> Facebook Adresi</label>
+    <input type="text" name="FacebookUrl" class="form-control" />
+    <br />
+    <label>Linkedln Adresi</label>
+    <input type="text" name="LinkedinUrl" class="form-control" />
+    <br />
+    <label>İnstagram Adresi</label>
+    <input type="text" name="InstagramUrl" class="form-control" />
+    <br />
+
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+
+</form>
+
+
+
+

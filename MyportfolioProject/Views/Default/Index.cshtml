@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+<!-- Hero Start -->   @*amac controllerden kodları yazıp buradan istediğimiz kodu kırpıp ındexler-partiallar yoluyla istediğimiz gibi yoğurup burdanda @html yardımıyla kodları calıstırmak*@
+@Html.Action("DefaultFeaturePartial")@*İsim Soyisim partialdan aldık(default controller ındexlerden*@
+<!-- Hero End -->
+<!-- About Start -->
+@Html.Action("DefaultAboutPartial")@*Hakkımda partialdan(index) aldık*@
+<!-- About End -->
+<!-- Service Start -->
+@Html.Action("DefaultServicePartial")@*Hakkımda partialdan(index) aldık*@
+<!-- Service End -->
+<!-- Experience Start -->
+@Html.Action("DefaultExperiences")@*Deneyimlerim partialdan(index) aldık*@
+<!-- Job Experience End -->
+<!-- Portfolio Start -->
+@Html.Action("DefaultProjectPartial")
+<!-- Portfolio End -->
+<!-- Testimonial Start -->
+@Html.Action("DefaultTestimonialPartial")
+<!-- Testimonial End -->
+<!-- Team Start -->
+@Html.Action("DefaultTeamPartial")
+<!-- Team End -->
+<!-- Contact Start -->
+@Html.Action("SendMessage")@*mesajımızı çektik tekrardan default controllerden*@
+<!-- Contact End -->
+<!-- Footer Start -->
+@Html.Action("DefaultSocialMediaPartial")
+<!-- Footer End -->

@@ -1,0 +1,49 @@
+﻿@model  List<MyportfolioProject.Models.Tbl_Testimonials>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<h3>Refaranslarım Sayfası</h3>
+
+<table class="table table-bordered ">
+
+    <tr>
+        <td>#</td>
+        <td>Resim Adresi</td>
+        <td>Yorumlar</td>
+        <td>İsim Soyisim</td>
+        <td>Ünvan</td>
+        <td>Durum</td>
+        <td>YorumTarihi</td>
+        <td>Sil</td>
+        <td>Güncelle</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.TestimonialId</td>
+            <td>@item.ImageUrl</td>
+            <td>@item.Comment</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Title</td>
+            <td>@item.Status</td>
+            <td>@item.CommentDate</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-outline-danger">Sil</a></td>
+            @*adres verdik-->controllr/ındex/id ye göre sil*@
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+
+
+
+</table>
+<a href="/Testimonial/AddTestimonial" class="btn btn-primary">Refarans Ekle</a>@*butona tıklandıgında addabout ıddex yollaycak*@
+
+
+
